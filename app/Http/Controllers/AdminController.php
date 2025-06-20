@@ -16,11 +16,11 @@ class AdminController extends Controller
             'pendingReports' => Report::where('status', 'pending')->count(),
             'inProgressReports' => Report::where('status', 'diproses')->count(),
             'completedReports' => Report::where('status', 'selesai')->count(),
-            
+
             'totalUsers' => User::count(),
             'mahasiswaUsers' => User::where('role', 'mahasiswa')->count(),
             'petugasUsers' => User::where('role', 'petugas')->count(),
-                
+
             'monthlyData' => Report::whereMonth('reported_at', now()->month)
                 ->selectRaw('DATE_FORMAT(reported_at, "%d %b") as day, COUNT(*) as count')
                 ->groupBy('day')
@@ -33,7 +33,7 @@ class AdminController extends Controller
                 ->where('found_status', 'not_claimed')->count(),
             'foundLostItems' => LostFoundItem::where('type', 'lost')
                 ->where('lost_status', 'found')->count(),
-                
+
             // Data kategori barang hilang/temuan
             'itemCategories' => LostFoundItem::select('category')
                 ->selectRaw('count(*) as count')
@@ -41,7 +41,7 @@ class AdminController extends Controller
                 ->orderByDesc('count')
                 ->limit(5)
                 ->get(),
-                
+
             // Data bulanan untuk chart
             'monthlyLostItems' => LostFoundItem::where('type', 'lost')
                 ->whereMonth('date', now()->month)
@@ -50,7 +50,7 @@ class AdminController extends Controller
                 ->get()
                 ->pluck('count', 'day')
                 ->toArray(),
-                
+
             'monthlyFoundItems' => LostFoundItem::where('type', 'found')
                 ->whereMonth('date', now()->month)
                 ->selectRaw('DATE_FORMAT(date, "%d %b") as day, COUNT(*) as count')

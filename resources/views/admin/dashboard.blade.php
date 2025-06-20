@@ -30,19 +30,19 @@
             <h2 class="text-lg font-semibold mb-2">Total Laporan</h2>
             <p class="text-3xl font-bold text-blue-600">{{ $totalReports }}</p>
         </div>
-        
+
         <!-- Laporan Pending -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Pending</h2>
             <p class="text-3xl font-bold text-yellow-600">{{ $pendingReports }}</p>
         </div>
-        
+
         <!-- Laporan Diproses -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Diproses</h2>
             <p class="text-3xl font-bold text-purple-600">{{ $inProgressReports }}</p>
         </div>
-        
+
         <!-- Laporan Selesai -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Selesai</h2>
@@ -57,13 +57,13 @@
             <h2 class="text-lg font-semibold mb-2">Total Pengguna</h2>
             <p class="text-3xl font-bold text-indigo-600">{{ $totalUsers }}</p>
         </div>
-        
+
         <!-- Mahasiswa -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Mahasiswa</h2>
             <p class="text-3xl font-bold text-cyan-600">{{ $mahasiswaUsers }}</p>
         </div>
-        
+
         <!-- Petugas -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Petugas</h2>
@@ -78,19 +78,19 @@
             <h2 class="text-lg font-semibold mb-2">Barang Hilang</h2>
             <p class="text-3xl font-bold text-red-600">{{ $totalLostItems }}</p>
         </div>
-        
+
         <!-- Total Barang Ditemukan -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Barang Ditemukan</h2>
             <p class="text-3xl font-bold text-green-600">{{ $totalFoundItems }}</p>
         </div>
-        
+
         <!-- Barang Belum Dikembalikan -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Belum Dikembalikan</h2>
             <p class="text-3xl font-bold text-yellow-600">{{ $unclaimedItems }}</p>
         </div>
-        
+
         <!-- Barang Hilang Ditemukan -->
         <div class="bg-white rounded-lg shadow p-6">
             <h2 class="text-lg font-semibold mb-2">Telah Ditemukan</h2>
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    
+
 </div>
 <!-- Sertakan Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

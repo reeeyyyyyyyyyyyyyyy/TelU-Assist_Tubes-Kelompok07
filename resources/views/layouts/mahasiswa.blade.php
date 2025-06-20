@@ -102,7 +102,7 @@
             <!-- Footer -->
             <footer class="py-4 px-6 bg-white border-t">
                 <div class="flex justify-between items-center">
-                    <p class="text-sm text-gray-600">© 2023 Tel-U Assist. Sistem Pelaporan Terpadu Telkom University</p>
+                    <p class="text-sm text-gray-600">© 2025 Tel-U Assist. Sistem Pelaporan Terpadu Telkom University</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-twitter"></i></a>

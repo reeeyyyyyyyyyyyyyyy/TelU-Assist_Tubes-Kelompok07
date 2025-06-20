@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\LostFoundItem;
+use App\Models\ReportCategory;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class LostFoundItemPolicy
+class ReportCategoryPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class LostFoundItemPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, LostFoundItem $lostFoundItem): bool
+    public function view(User $user, ReportCategory $reportCategory): bool
     {
         return false;
     }
@@ -35,7 +35,7 @@ class LostFoundItemPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, LostFoundItem $lostFoundItem): bool
+    public function update(User $user, ReportCategory $reportCategory): bool
     {
         return false;
     }
@@ -43,7 +43,7 @@ class LostFoundItemPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, LostFoundItem $lostFoundItem): bool
+    public function delete(User $user, ReportCategory $reportCategory): bool
     {
         return false;
     }
@@ -51,7 +51,7 @@ class LostFoundItemPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, LostFoundItem $lostFoundItem): bool
+    public function restore(User $user, ReportCategory $reportCategory): bool
     {
         return false;
     }
@@ -59,7 +59,7 @@ class LostFoundItemPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, LostFoundItem $lostFoundItem): bool
+    public function forceDelete(User $user, ReportCategory $reportCategory): bool
     {
         return false;
     }

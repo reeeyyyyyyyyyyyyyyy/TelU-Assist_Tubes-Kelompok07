@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLostFoundItemRequest;
 use App\Http\Requests\UpdateLostFoundItemRequest;
 use App\Models\LostFoundItem;
+use DB;
 use Storage;
 
 class LostFoundItemController extends Controller
@@ -70,6 +71,8 @@ class LostFoundItemController extends Controller
     public function edit(string $id)
     {
         $item = LostFoundItem::with(['user'])->find($id);
+
+
         return view('lost-found.edit', compact('item'));
     }
 
@@ -102,8 +105,10 @@ class LostFoundItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(LostFoundItem $lostFoundItem)
+    public function destroy(string $id)
     {
+        $lostFoundItem = LostFoundItem::find($id);
+
         if ($lostFoundItem->photo) {
             Storage::disk('public')->delete($lostFoundItem->photo);
         }

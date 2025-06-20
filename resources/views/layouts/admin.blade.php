@@ -24,23 +24,23 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         .sidebar {
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
-        
+
         .nav-link {
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
         }
-        
+
         .nav-link:hover, .nav-link.active {
             background-color: rgba(227, 6, 19, 0.05);
             border-left-color: #E30613;
             color: #E30613;
         }
-        
+
         .admin-content {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
@@ -56,7 +56,7 @@
                 </div>
                 <h1 class="text-xl font-bold text-campus">Tel-U <span class="text-primary">Assist</span> Admin</h1>
             </div>
-            
+
             <nav class="space-y-1">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }} block py-3 px-4 rounded-lg">
                     <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
@@ -111,7 +111,7 @@
             <!-- Footer -->
             <footer class="py-4 px-6 bg-white border-t">
                 <div class="flex justify-between items-center">
-                    <p class="text-sm text-gray-600">© 2023 Tel-U Assist. Sistem Pelaporan Terpadu Telkom University</p>
+                    <p class="text-sm text-gray-600">© 2025 Tel-U Assist. Sistem Pelaporan Terpadu Telkom University</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-twitter"></i></a>

@@ -62,9 +62,9 @@ if (auth()->user()->role === "admin") {
 
                 @if ($item->type === 'found')
                 <div>
-                    <label for="lost_status" class="block text-sm font-medium text-gray-700 mb-1">Status Hilang</label>
+                    <label for="lost_status" class="block text-sm font-medium text-gray-700 mb-1">Status</label>
                     <select name="lost_status" id="lost_status" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" {{ auth()->user()->role === 'mahasiswa' ? 'disabled' : '' }}>
-                        <option value="pending" {{ $item->lost_status == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="not_found" {{ $item->lost_status == 'not_found' ? 'selected' : '' }}>Hilang</option>
                         <option value="found" {{ $item->lost_status == 'found' ? 'selected' : '' }}>Ditemukan</option>
                     </select>
                 </div>
@@ -72,7 +72,7 @@ if (auth()->user()->role === "admin") {
                 <div>
                     <label for="found_status" class="block text-sm font-medium text-gray-700 mb-1">Status Temuan</label>
                     <select name="found_status" id="found_status" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" {{ auth()->user()->role === 'mahasiswa' ? 'disabled' : '' }}>
-                        <option value="pending" {{ $item->found_status == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="not_claimed" {{ $item->found_status == 'not_claimed' ? 'selected' : '' }}>Belum Diambil</option>
                         <option value="claimed" {{ $item->found_status == 'claimed' ? 'selected' : '' }}>Diambil</option>
                     </select>
                 </div>

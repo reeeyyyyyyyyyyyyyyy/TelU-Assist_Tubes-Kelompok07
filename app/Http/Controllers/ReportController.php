@@ -17,7 +17,7 @@ class ReportController extends Controller
     {
         $reports = Report::with(['user', 'reportCategory', 'location'])
             ->whereHas('user', function ($q) {
-                if (auth()->user()->role === 'mahasiswa') { 
+                if (auth()->user()->role === 'mahasiswa') {
                     $q->where('id', auth()->user()->id);
                 }
             })
@@ -53,13 +53,13 @@ class ReportController extends Controller
             ]);
 
             $validated['user_id'] = auth()->user()->id;
-            
+
             if ($request->hasFile('photo')) {
                 $validated['photo'] = $request->file('photo')->store('report-photos', 'public');
             }
-            
+
             Report::create($validated);
-            
+
             return redirect()->route('report.index')->with('success', 'Report created successfully.');
         } catch (\Throwable $th) {
             return redirect()->route('report.create')->withInput()->with('error', $th->getMessage());
@@ -103,9 +103,9 @@ class ReportController extends Controller
             ]);
 
             $validated['user_id'] = auth()->user()->id;
-            
+
             $report = Report::with(['user', 'reportCategory', 'location'])->find($id);
-            
+
             if ($request->hasFile('photo')) {
                 // Delete old photo if exists
                 if ($report->photo) {
@@ -113,9 +113,9 @@ class ReportController extends Controller
                 }
                 $validated['photo'] = $request->file('photo')->store('report-photos', 'public');
             }
-            
+
             $report->update($validated);
-            
+
             return redirect()->route('report.index')->with('success', 'Report updated successfully.');
         } catch (\Throwable $th) {
             return redirect()->route('report.edit', ['id' => $id])->withInput()->with('error', $th->getMessage());
@@ -125,8 +125,10 @@ class ReportController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Report $report)
+    public function destroy(string $id)
     {
+        $report = Report::find($id);
+
         if ($report->photo) {
             Storage::disk('public')->delete($report->photo);
         }

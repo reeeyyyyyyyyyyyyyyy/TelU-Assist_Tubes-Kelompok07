@@ -16,5 +16,5 @@ class ReportCategory extends Model
         'description',
     ];
 
-    
+
 }

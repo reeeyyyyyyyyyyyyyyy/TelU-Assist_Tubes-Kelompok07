@@ -52,7 +52,7 @@
             <div class="border-b pb-4">
                 <div class="flex justify-between">
                     <h3 class="font-medium text-gray-800">{{ $report->title }}</h3>
-                    <span class="px-2 py-1 text-xs rounded-full 
+                    <span class="px-2 py-1 text-xs rounded-full
                         @if($report->status == 'pending') bg-yellow-100 text-yellow-800
                         @elseif($report->status == 'diproses') bg-blue-100 text-blue-800
                         @else bg-green-100 text-green-800 @endif">
@@ -77,7 +77,7 @@
             <div class="border-b pb-4">
                 <div class="flex justify-between">
                     <h3 class="font-medium text-gray-800">{{ $item->item_name }}</h3>
-                    <span class="px-2 py-1 text-xs rounded-full 
+                    <span class="px-2 py-1 text-xs rounded-full
                         @if($item->type == 'lost' && $item->lost_status == 'not_found') bg-yellow-100 text-yellow-800
                         @elseif($item->type == 'lost' && $item->lost_status == 'found') bg-green-100 text-green-800
                         @elseif($item->type == 'found' && $item->found_status == 'not_claimed') bg-blue-100 text-blue-800

@@ -67,7 +67,7 @@ class ReportCategoryController extends Controller
         try {
             $validated = $request->validated();
 
-            $reportCategory = ReportCategory::find($id);
+            $reportCategory = ReportCategory::find($request->id);
             $reportCategory->update($validated);
 
             return redirect()->route('reportcategory.index')->with('success', 'Report category updated successfully.');
@@ -79,8 +79,9 @@ class ReportCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ReportCategory $reportCategory)
+    public function destroy(string $id)
     {
+        $reportCategory = ReportCategory::find($id);
         $reportCategory->delete();
         return redirect()->route('reportcategory.index')->with('success', 'Report category deleted successfully.');
     }
