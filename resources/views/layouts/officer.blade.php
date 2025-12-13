@@ -58,7 +58,7 @@
             </div>
 
             <nav class="space-y-1">
-                <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }} block py-3 px-4 rounded-lg">
+                <a href="{{ route('officer.dashboard') }}" class="nav-link {{ request()->routeIs('officer.dashboard') ? 'active' : '' }} block py-3 px-4 rounded-lg">
                     <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
                 </a>
                 <a href="{{ route('report.index') }}" class="nav-link {{ request()->routeIs('report.index') ? 'active' : '' }} block py-3 px-4 rounded-lg">

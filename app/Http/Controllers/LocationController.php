@@ -70,6 +70,7 @@ class LocationController extends Controller
         try {
             $validated = $request->validate([
                 'name' => 'sometimes|string|max:255',
+                'code' => 'sometimes|string|max:255',
                 'description' => 'nullable|string',
             ]);
 
