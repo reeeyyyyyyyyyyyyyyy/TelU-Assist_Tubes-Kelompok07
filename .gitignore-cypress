@@ -1,0 +1,31 @@
+# Cypress - E2E Testing
+
+# Cypress folders
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Node modules
+node_modules/
+npm-debug.log
+
+# Environment files
+.env.testing
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Test results
+test-results/
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
